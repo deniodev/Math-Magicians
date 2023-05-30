@@ -1,33 +1,54 @@
-import React from 'react';
+import { useState } from 'react';
+import calculate from '../logic/calculate';
 import '../index.css';
 
-const Buttons = () => (
-  <div className="calculator">
-    <div className="btn output">0</div>
-    <span className="btn">AC</span>
-    <span className="btn">+/-</span>
-    <span className="btn">%</span>
-    <span className="btn operations">&divide;</span>
-    <span className="btn">7</span>
-    <span className="btn">8</span>
-    <span className="btn">9</span>
-    <span className="btn operations">&times;</span>
-    <span className="btn">4</span>
-    <span className="btn">5</span>
-    <span className="btn">6</span>
-    <span className="btn operations">&minus;</span>
-    <span className="btn">1</span>
-    <span className="btn">2</span>
-    <span className="btn">3</span>
-    <span className="btn operations">+</span>
-    <span className="btn zero">0</span>
-    <span className="btn">.</span>
-    <span className="btn operations">=</span>
-  </div>
-);
+const Buttons = () => {
+  const [total, setTotal] = useState(null);
+  const [next, setNext] = useState(null);
+  const [operation, setOperation] = useState(null);
+
+  const click = (e) => {
+    const result = calculate({ total, next, operation }, e.target.textContent);
+    setTotal(result.total);
+    setNext(result.next);
+    setOperation(result.operation);
+  };
+
+  return (
+    <>
+      <div className="btn output">
+        {total}
+        {operation}
+        {next}
+      </div>
+      <button onClick={click} type="button" className="btn">AC</button>
+      <button onClick={click} type="button" className="btn">+/-</button>
+      <button onClick={click} type="button" className="btn">%</button>
+      <button onClick={click} type="button" className="btn operations">÷</button>
+      <button onClick={click} type="button" className="btn">7</button>
+      <button onClick={click} type="button" className="btn">8</button>
+      <button onClick={click} type="button" className="btn">9</button>
+      <button onClick={click} type="button" className="btn operations">x</button>
+      <button onClick={click} type="button" className="btn">4</button>
+      <button onClick={click} type="button" className="btn">5</button>
+      <button onClick={click} type="button" className="btn">6</button>
+      <button onClick={click} type="button" className="btn operations">-</button>
+      <button onClick={click} type="button" className="btn">1</button>
+      <button onClick={click} type="button" className="btn">2</button>
+      <button onClick={click} type="button" className="btn">3</button>
+      <button onClick={click} type="button" className="btn operations">+</button>
+      <button onClick={click} type="button" className="btn zero">0</button>
+      <button onClick={click} type="button" className="btn">.</button>
+      <button onClick={click} type="button" className="btn operations">=</button>
+    </>
+  );
+};
 
 const Calculator = () => (
-  <Buttons />
+  <div className="calculator">
+    <Buttons />
+  </div>
+
 );
 
 export default Calculator;

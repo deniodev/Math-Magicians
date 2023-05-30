@@ -175,8 +175,8 @@ You can deploy this project using:
 
 
 
-- [ ] **[Add the UI]**
-- [ ] **[Add calculations functionalities]**
+- [ ] **[Fetch data from API]**
+- [ ] **[Improve the UI]**
 
 
 
