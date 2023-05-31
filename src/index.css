@@ -42,6 +42,7 @@ body {
   background-color: grey;
   color: white;
   padding-right: 5px;
+  border: 2px solid black;
 }
 
 .zero {
@@ -50,4 +51,15 @@ body {
 
 .operations {
   background-color: orange;
+}
+
+.quotes {
+  min-width: 300px;
+  width: 40%;
+}
+
+.author {
+  font-weight: 500;
+  font-style: italic;
+  color: black;
 }
