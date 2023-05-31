@@ -175,7 +175,6 @@ You can deploy this project using:
 
 
 
-- [ ] **[Fetch data from API]**
 - [ ] **[Improve the UI]**
 
 
