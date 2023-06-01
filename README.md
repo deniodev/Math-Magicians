@@ -144,7 +144,7 @@ To run the project, execute the following command:
 ### Run Tests
 
 To run the tests, execute the following command: <br>
-npm test
+
 
 ### Deployment
 
