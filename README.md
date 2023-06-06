@@ -176,6 +176,7 @@ You can deploy this project using:
 
 
 - [ ] **[Improve the UI]**
+- [ ] **[Tests]**
 
 
 

@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
   font-size: 2rem;
+  background: linear-gradient(90deg, #fff, gray);
 }
 
 .app {
@@ -9,8 +11,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  width: 80vw;
+  height: 80vh;
 }
 
 .calculator {
@@ -62,4 +64,50 @@ body {
   font-weight: 500;
   font-style: italic;
   color: black;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3em;
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
+.link {
+  color: black;
+  font-size: 18px;
+  padding: 0 1.5em;
+  margin: 0;
+}
+
+.calc {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.cal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70vw;
+  padding: 0 5em;
+}
+
+.math {
+  height: 100%;
+}
+
+.math-text {
+  height: 100%;
+}
+
+.homeContent p {
+  font-size: 18px;
+  font-weight: 600;
 }
